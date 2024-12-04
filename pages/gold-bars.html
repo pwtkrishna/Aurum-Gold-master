@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="gold-coin.css" />
+    <link rel="stylesheet" href="../css/queries.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="top-bar">
+      <a href="https://gold.premiercourses.in/subscriptions"
+        >Wealth Creation Account</a
+      >
+      <a href="#">Track Order</a>
+      <a href="#">Login/Register</a>
+    </div>
+    <header class="header">
+      <a href="./" class="logo">
+        <img src="../images/logo.png" alt="Aurum Gold Logo" />
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="gold-coin.html">Gold Coins</a></li>
+          <li><a href="gold-bars.html">Gold Bars</a></li>
+          <li><a href="gift.html">Gifts</a></li>
+          <li>
+            <a href="https://gold.premiercourses.in/subscriptions"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <section class="section-gold-coins">
+      <!-- <img src="../images/slides/BANNER GOLD COINS.jpg" alt="Gold slide" /> -->
+      <h2 class="heading-gold-coins">Gold Bars</h2>
+    </section>
+
+    <section class="section-products">
+      <div class="product-container">
+        <div class="static-grid">
+          <div class="product-card">
+            <div class="coin-image">
+              <img
+                src="../images/slides/2149872245.jpg"
+                alt="Lakshmi Ganesh Coin"
+              />
+            </div>
+            <div class="variants">
+              <button class="variant-btn">V1</button>
+              <button class="variant-btn">V2</button>
+              <button class="variant-btn">V3</button>
+              <div class="quantity-selector">
+                <button class="quantity-btn up">▲</button>
+                <span>1</span>
+                <button class="quantity-btn down">▼</button>
+              </div>
+            </div>
+            <div class="stock-status in-stock">In Stock</div>
+          </div>
+          <div class="product-card">
+            <div class="coin-image">
+              <img src="../images/slides/2149872245.jpg" alt="Deity Coin" />
+            </div>
+            <div class="variants">
+              <button class="variant-btn">V1</button>
+              <button class="variant-btn">V2</button>
+              <button class="variant-btn">V3</button>
+              <div class="quantity-selector">
+                <button class="quantity-btn up">▲</button>
+                <span>1</span>
+                <button class="quantity-btn down">▼</button>
+              </div>
+            </div>
+            <div class="stock-status out-of-stock">Out of Stock</div>
+          </div>
+          <div class="product-card">
+            <div class="coin-image">
+              <img
+                src="../images/slides/2149872245.jpg"
+                alt="Lakshmi Ganesh Coin"
+              />
+            </div>
+            <div class="variants">
+              <button class="variant-btn">V1</button>
+              <button class="variant-btn">V2</button>
+              <button class="variant-btn">V3</button>
+              <div class="quantity-selector">
+                <button class="quantity-btn up">▲</button>
+                <span>1</span>
+                <button class="quantity-btn down">▼</button>
+              </div>
+            </div>
+            <div class="stock-status in-stock">In Stock</div>
+          </div>
+          <div class="product-card">
+            <div class="coin-image">
+              <img src="../images/slides/2149872245.jpg" alt="Deity Coin" />
+            </div>
+            <div class="variants">
+              <button class="variant-btn">V1</button>
+              <button class="variant-btn">V2</button>
+              <button class="variant-btn">V3</button>
+              <div class="quantity-selector">
+                <button class="quantity-btn up">▲</button>
+                <span>1</span>
+                <button class="quantity-btn down">▼</button>
+              </div>
+            </div>
+            <div class="stock-status in-stock">In Stock</div>
+          </div>
+        </div>
+
+        <!-- Bottom Static Grid -->
+        <div class="static-grid">
+          <div class="product-card">
+            <div class="coin-image">
+              <img
+                src="../images/slides/2149872245.jpg"
+                alt="Lakshmi Ganesh Coin"
+              />
+            </div>
+            <div class="variants">
+              <button class="variant-btn">V1</button>
+              <button class="variant-btn">V2</button>
+              <button class="variant-btn">V3</button>
+              <div class="quantity-selector">
+                <button class="quantity-btn up">▲</button>
+                <span>1</span>
+                <button class="quantity-btn down">▼</button>
+              </div>
+            </div>
+            <div class="stock-status in-stock">In Stock</div>
+          </div>
+          <div class="product-card">
+            <div class="coin-image">
+              <img src="../images/slides/2149872245.jpg" alt="Deity Coin" />
+            </div>
+            <div class="variants">
+              <button class="variant-btn">V1</button>
+              <button class="variant-btn">V2</button>
+              <button class="variant-btn">V3</button>
+              <div class="quantity-selector">
+                <button class="quantity-btn up">▲</button>
+                <span>1</span>
+                <button class="quantity-btn down">▼</button>
+              </div>
+            </div>
+            <div class="stock-status out-of-stock">Out of Stock</div>
+          </div>
+          <div class="product-card">
+            <div class="coin-image">
+              <img
+                src="../images/slides/2149872245.jpg"
+                alt="Lakshmi Ganesh Coin"
+              />
+            </div>
+            <div class="variants">
+              <button class="variant-btn">V1</button>
+              <button class="variant-btn">V2</button>
+              <button class="variant-btn">V3</button>
+              <div class="quantity-selector">
+                <button class="quantity-btn up">▲</button>
+                <span>1</span>
+                <button class="quantity-btn down">▼</button>
+              </div>
+            </div>
+            <div class="stock-status in-stock">In Stock</div>
+          </div>
+          <div class="product-card">
+            <div class="coin-image">
+              <img src="../images/slides/2149872245.jpg" alt="Deity Coin" />
+            </div>
+            <div class="variants">
+              <button class="variant-btn">V1</button>
+              <button class="variant-btn">V2</button>
+              <button class="variant-btn">V3</button>
+              <div class="quantity-selector">
+                <button class="quantity-btn up">▲</button>
+                <span>1</span>
+                <button class="quantity-btn down">▼</button>
+              </div>
+            </div>
+            <div class="stock-status in-stock">In Stock</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <a href="./index.html" class="logo">
+            <img src="../images/logo.png" alt="Aurum Gold Logo" />
+          </a>
+          <p>
+            Welcome to Aurum Gold, a digital sanctuary where the essence of gold
+            transcends the ordinary. Immerse yourself in a realm of opulence,
+            where every pixel glistens with the warmth of golden hues. From
+            curated collections that embody luxury to a seamless user
+            experience, we've forged a digital masterpiece that mirrors the
+            richness of the precious metal itself.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h2>QUICK LINKS</h2>
+          <ul>
+            <li><a href="../index.html" class="quick-link">Home</a></li>
+            <li>
+              <a href="about-us.html" class="quick-link">About Us</a>
+            </li>
+            <li><a href="gold-coin.html" class="quick-link">Gold Coins</a></li>
+            <li><a href="gold-bars.html" class="quick-link">Gold Bars</a></li>
+            <li><a href="gift.html" class="quick-link">Gifts</a></li>
+            <li>
+              <a
+                href="https://gold.premiercourses.in/subscriptions"
+                class="quick-link"
+                >Contact Us</a
+              >
+            </li>
+            <li><a href="#" class="quick-link">Privacy Policy</a></li>
+            <li><a href="#" class="quick-link">Terms And Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h2>INFO</h2>
+          <ul>
+            <li><a href="#" class="quick-link">Shipping & Returns</a></li>
+            <li><a href="#" class="quick-link">Privacy Policy</a></li>
+            <li><a href="#" class="quick-link">FAQs</a></li>
+            <li><a href="#" class="quick-link">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h2>CONTACT US</h2>
+          <div class="contact-info">
+            <a class="contact-info-link" href="#"
+              ><img src="../svgs/map-pin.svg" alt="" />
+              <p>
+                Address: 45B, Near Guru Nanak Mission Chowk, Shastri Nagar,
+                Lajpat Nagar, Jalandhar, Punjab 144001
+              </p>
+            </a>
+          </div>
+          <div class="contact-info">
+            <a class="contact-info-link" href="#"
+              ><img src="../svgs/phone.svg" alt="" />
+              <p>09779770059</p>
+            </a>
+          </div>
+          <div class="contact-info">
+            <a class="contact-info-link" href="#"
+              ><img src="../svgs/at-sign.svg" alt="" />
+              <p>Aurumgold@gmail.com</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-footer">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"
+            ><img src="../svgs/facebook.svg" alt=""
+          /></a>
+          <a href="https://www.instagram.com/"
+            ><img src="../svgs/instagram.svg" alt=""
+          /></a>
+          <a href="https://x.com/"
+            ><img src="../svgs/x-twitter-brands-solid.svg" alt=""
+          /></a>
+          <a href="https://in.pinterest.com/"
+            ><img src="../svgs/Pinterest.svg" alt=""
+          /></a>
+          <a href="https://www.youtube.com/"
+            ><img src="../svgs/youtube.svg" alt=""
+          /></a>
+        </div>
+        <div class="copyright-content">
+          <p>
+            © 2024 <span class="aurum-gold">Aurum Gold </span>. &nbsp;All Rights
+            Reserved. Website designed and developed by
+            <a class="premier-webtech" href="https://premierwebtech.com/"
+              >Premier Webtech</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

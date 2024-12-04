@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="top-bar">
+      <a href="https://gold.premiercourses.in/subscriptions"
+        >Wealth Creation Account</a
+      >
+      <a href="#">Track Order</a>
+      <a href="#">Login/Register</a>
+    </div>
+    <header class="header">
+      <a href="./" class="logo">
+        <img src="./images/logo.png" alt="Aurum Gold Logo" />
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="./">Home</a></li>
+          <li><a href="./pages/about-us.html">About Us</a></li>
+          <li><a href="pages/gold-coin.html">Gold Coins</a></li>
+          <li><a href="pages/gold-bars.html">Gold Bars</a></li>
+          <li><a href="#">Gifts</a></li>
+          <li>
+            <a href="https://gold.premiercourses.in/subscriptions"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+    <main>
+      <section class="section-slides">
+        <div class="main-slider-container">
+          <div class="slider-container">
+            <div class="slide slide-background">
+              <div class="slide-flex">
+                <div>
+                  <img src="images/slides/lakshmiji.png" alt="Gold slide" />
+                </div>
+                <div>
+                  <img src="images/slides/aurum.png" alt="Gold slide" />
+                </div>
+                <div>
+                  <img src="images/slides/ganeshji.png" alt="Gold slide" />
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="images/slides/BANNER GOLD COINS.jpg" alt="Gold slide" />
+            </div>
+            <div class="slide">
+              <img src="images/slides/3.jpg" alt="Gold slide" />
+            </div>
+
+            <button class="slider__btn slider__btn--left">
+              <svg class="flickityt4s-button-icon" viewBox="0 0 100 100">
+                <path
+                  d="M 10,50 L 60,100 L 65,95 L 20,50  L 65,5 L 60,0 Z"
+                  class="arrow"
+                ></path>
+              </svg>
+            </button>
+            <button class="slider__btn slider__btn--right">
+              <svg class="flickityt4s-button-icon" viewBox="0 0 100 100">
+                <path
+                  d="M 10,50 L 60,100 L 65,95 L 20,50  L 65,5 L 60,0 Z"
+                  class="arrow"
+                  transform="translate(100, 100) rotate(180) "
+                ></path>
+              </svg>
+            </button>
+            <div class="dots"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-little-extra">
+        <div class="little-extra-container">
+          <h1 class="heading-primary heading">A Little Something Extra</h1>
+          <div class="categories-flex">
+            <a href="/pages/gold-bars.html">
+              <div>
+                <img src="images/slides/2149872245.jpg" alt="" />
+              </div>
+            </a>
+            <a href="pages/gold-coin.html">
+              <div>
+                <img src="images/slides/2148872284.jpg" alt="" />
+              </div>
+            </a>
+            <a href="pages/gift.html">
+              <div>
+                <img src="images/slides/2149246338.jpg" alt="" />
+              </div>
+            </a>
+          </div>
+          <!-- <div class="little-extra__container">
+            <div class="little-extra-circle-container">
+              <div class="little-extra-img-circle">
+                <img
+                  src="images/category/Necklace_08086a6f-5270-4b0f-ad53-5910711134d3.webp"
+                  alt=""
+                />
+              </div>
+              <div class="little-extra-img-desc">
+                <a class="link" href="">Necklaces</a>
+              </div>
+            </div>
+            <div class="little-extra-circle-container">
+              <div class="little-extra-img-circle">
+                <img
+                  src="images/category/Mangalsutra_313bb9ec-cbe8-48ab-aec4-283ae54a1fc2.webp"
+                  alt=""
+                />
+              </div>
+              <div class="little-extra-img-desc">
+                <a class="link" href="">Mangalsutra</a>
+              </div>
+            </div>
+            <div class="little-extra-circle-container">
+              <div class="little-extra-img-circle">
+                <img
+                  src="images/category/Bracelet_5bc8c37c-9327-4391-ae17-fdf4c8e8033f.webp"
+                  alt=""
+                />
+              </div>
+              <div class="little-extra-img-desc">
+                <a class="link" href="">Bracelet</a>
+              </div>
+            </div>
+            <div class="little-extra-circle-container">
+              <div class="little-extra-img-circle">
+                <img src="images/category/Ring_1_1.webp" alt="" />
+              </div>
+              <div class="little-extra-img-desc">
+                <a class="link" href="">Ring</a>
+              </div>
+            </div>
+            <div class="little-extra-circle-container">
+              <div class="little-extra-img-circle">
+                <img
+                  src="images/category/Necklace_08086a6f-5270-4b0f-ad53-5910711134d3.webp"
+                  alt=""
+                />
+              </div>
+              <div class="little-extra-img-desc">
+                <a class="link" href="">Necklaces</a>
+              </div>
+            </div>
+
+            <button class="little-extra-slider__btn slider__btn--left">
+              <svg class="flickityt4s-button-icon" viewBox="0 0 100 100">
+                <path
+                  d="M 10,50 L 60,100 L 65,95 L 20,50  L 65,5 L 60,0 Z"
+                  class="arrow"
+                ></path>
+              </svg>
+            </button>
+            <button class="little-extra-slider__btn slider__btn--right">
+              <svg class="flickityt4s-button-icon" viewBox="0 0 100 100">
+                <path
+                  d="M 10,50 L 60,100 L 65,95 L 20,50  L 65,5 L 60,0 Z"
+                  class="arrow"
+                  transform="translate(100, 100) rotate(180) "
+                ></path>
+              </svg>
+            </button>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- <section class="section-categories">
+        <div class="container">
+          <div class="categories-container">
+            <div class="category">
+              <img src="images/category/web_cr_2.webp" alt="" />
+            </div>
+            <div class="category">
+              <img src="images/category/web_cr_2.webp" alt="" />
+            </div>
+            <div class="category">
+              <img src="images/category/web_cr_2.webp" alt="" />
+            </div>
+            <div class="category">
+              <img src="images/category/web_cr_2.webp" alt="" />
+            </div>
+            <button class="little-extra-slider__btn slider__btn--left">
+              <svg class="flickityt4s-button-icon" viewBox="0 0 100 100">
+                <path
+                  d="M 10,50 L 60,100 L 65,95 L 20,50  L 65,5 L 60,0 Z"
+                  class="arrow"
+                ></path>
+              </svg>
+            </button>
+            <button class="little-extra-slider__btn slider__btn--right">
+              <svg class="flickityt4s-button-icon" viewBox="0 0 100 100">
+                <path
+                  d="M 10,50 L 60,100 L 65,95 L 20,50  L 65,5 L 60,0 Z"
+                  class="arrow"
+                  transform="translate(100, 100) rotate(180) "
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="section-products">
+        <div class="product-container">
+          <div class="static-grid">
+            <div class="product-card">
+              <div class="coin-image">
+                <img
+                  src="images/PRODUCTS/Gold coin 3.png"
+                  alt="Lakshmi Ganesh Coin"
+                />
+              </div>
+              <div class="variants">
+                <button class="variant-btn">V1</button>
+                <button class="variant-btn">V2</button>
+                <button class="variant-btn">V3</button>
+                <div class="quantity-selector">
+                  <button class="quantity-btn up">▲</button>
+                  <span>1</span>
+                  <button class="quantity-btn down">▼</button>
+                </div>
+              </div>
+              <div class="stock-status in-stock">In Stock</div>
+            </div>
+            <div class="product-card">
+              <div class="coin-image">
+                <img src="images/PRODUCTS/gold coin 2.png" alt="Deity Coin" />
+              </div>
+              <div class="variants">
+                <button class="variant-btn">V1</button>
+                <button class="variant-btn">V2</button>
+                <button class="variant-btn">V3</button>
+                <div class="quantity-selector">
+                  <button class="quantity-btn up">▲</button>
+                  <span>1</span>
+                  <button class="quantity-btn down">▼</button>
+                </div>
+              </div>
+              <div class="stock-status out-of-stock">Out of Stock</div>
+            </div>
+            <div class="product-card">
+              <div class="coin-image">
+                <img
+                  src="images/PRODUCTS/Gold coin 3.png"
+                  alt="Lakshmi Ganesh Coin"
+                />
+              </div>
+              <div class="variants">
+                <button class="variant-btn">V1</button>
+                <button class="variant-btn">V2</button>
+                <button class="variant-btn">V3</button>
+                <div class="quantity-selector">
+                  <button class="quantity-btn up">▲</button>
+                  <span>1</span>
+                  <button class="quantity-btn down">▼</button>
+                </div>
+              </div>
+              <div class="stock-status in-stock">In Stock</div>
+            </div>
+            <div class="product-card">
+              <div class="coin-image">
+                <img src="images/PRODUCTS/gold coin 2.png" alt="Deity Coin" />
+              </div>
+              <div class="variants">
+                <button class="variant-btn">V1</button>
+                <button class="variant-btn">V2</button>
+                <button class="variant-btn">V3</button>
+                <div class="quantity-selector">
+                  <button class="quantity-btn up">▲</button>
+                  <span>1</span>
+                  <button class="quantity-btn down">▼</button>
+                </div>
+              </div>
+              <div class="stock-status in-stock">In Stock</div>
+            </div>
+          </div>
+
+          <!-- Bottom Static Grid -->
+          <div class="static-grid">
+            <div class="product-card">
+              <div class="coin-image">
+                <img
+                  src="images/PRODUCTS/Gold coin 3.png"
+                  alt="Lakshmi Ganesh Coin"
+                />
+              </div>
+              <div class="variants">
+                <button class="variant-btn">V1</button>
+                <button class="variant-btn">V2</button>
+                <button class="variant-btn">V3</button>
+                <div class="quantity-selector">
+                  <button class="quantity-btn up">▲</button>
+                  <span>1</span>
+                  <button class="quantity-btn down">▼</button>
+                </div>
+              </div>
+              <div class="stock-status in-stock">In Stock</div>
+            </div>
+            <div class="product-card">
+              <div class="coin-image">
+                <img src="images/PRODUCTS/gold coin 2.png" alt="Deity Coin" />
+              </div>
+              <div class="variants">
+                <button class="variant-btn">V1</button>
+                <button class="variant-btn">V2</button>
+                <button class="variant-btn">V3</button>
+                <div class="quantity-selector">
+                  <button class="quantity-btn up">▲</button>
+                  <span>1</span>
+                  <button class="quantity-btn down">▼</button>
+                </div>
+              </div>
+              <div class="stock-status out-of-stock">Out of Stock</div>
+            </div>
+            <div class="product-card">
+              <div class="coin-image">
+                <img
+                  src="images/PRODUCTS/Gold coin 3.png"
+                  alt="Lakshmi Ganesh Coin"
+                />
+              </div>
+              <div class="variants">
+                <button class="variant-btn">V1</button>
+                <button class="variant-btn">V2</button>
+                <button class="variant-btn">V3</button>
+                <div class="quantity-selector">
+                  <button class="quantity-btn up">▲</button>
+                  <span>1</span>
+                  <button class="quantity-btn down">▼</button>
+                </div>
+              </div>
+              <div class="stock-status in-stock">In Stock</div>
+            </div>
+            <div class="product-card">
+              <div class="coin-image">
+                <img src="images/PRODUCTS/gold coin 2.png" alt="Deity Coin" />
+              </div>
+              <div class="variants">
+                <button class="variant-btn">V1</button>
+                <button class="variant-btn">V2</button>
+                <button class="variant-btn">V3</button>
+                <div class="quantity-selector">
+                  <button class="quantity-btn up">▲</button>
+                  <span>1</span>
+                  <button class="quantity-btn down">▼</button>
+                </div>
+              </div>
+              <div class="stock-status in-stock">In Stock</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-embrace-the-purity">
+        <div class="embrace-container">
+          <div class="embrace-image-container">
+            <img class="embrace-image" src="images/slides/aurum.png" alt="" />
+          </div>
+          <div class="embrace-heading-container">
+            <h2 class="heading-embrace">Embrace the purity,</h2>
+            <h2 class="heading-embrace">Cherish the gold</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-wealth-creation">
+        <div class="embrace-container wealth-container">
+          <div class="wealth-image-container">
+            <img
+              class="embrace-image wealth-creation-img"
+              src="images/slides/portrait-format,-transparent-background,-shadow-designify.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="embrace-heading-container wealth-creation-heading-container"
+          >
+            <h2 class="heading-embrace heading-wealth">Create Wealth</h2>
+            <h2 class="heading-embrace heading-wealth margin-bottom">
+              Creation Account
+            </h2>
+            <a class="more-details-link" href="#">More Details</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="customer-love">
+        <div class="gallery">
+          <figure class="gallery__item gallery__item--1">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 1"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--2">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 2"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--3">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 3"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--4">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 4"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--5">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 5"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--6">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 6"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--7">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 7"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--8">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 8"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--9">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 9"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--10">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 10"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--11">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 11"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--12">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 12"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--13">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 13"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--14">
+            <img
+              src="images/CUSTOMER/shradha.webp"
+              alt="Happy customer 14"
+              class="gallery__img"
+            />
+          </figure>
+        </div>
+
+        <div class="content-right">
+          <h2 class="section-title">CUSTOMER LOVE</h2>
+          <h3 class="customer-count">1 LAKH +</h3>
+          <p class="customer-text">HAPPY CUSTOMERS!</p>
+          <button class="view-reviews-btn">View All Reviews</button>
+        </div>
+      </section> -->
+
+      <!-- <section class="section-blogs">
+        <div class="blog-grid-container">
+          <div class="podcast-grid">
+            <article class="podcast-card">
+              <div class="card-image"></div>
+              <div class="gradient-overlay"></div>
+              <div class="card-content">
+                <a href="#" class="card-content-link">
+                  <h2 class="card-title">
+                    Why the First Mile Is Like Monday Mornings
+                  </h2>
+                  <div class="card-content-inner">
+                    <p class="card-meta">Benjamin Thomas • Morning Talk</p>
+                    <span class="card-meta-arrow">&rarr;</span>
+                  </div>
+                </a>
+              </div>
+            </article>
+
+            <article class="podcast-card">
+              <div class="card-image"></div>
+              <div class="gradient-overlay"></div>
+              <div class="card-content">
+                <a href="#" class="card-content-link">
+                  <h2 class="card-title">
+                    Why the First Mile Is Like Monday Mornings
+                  </h2>
+                  <div class="card-content-inner">
+                    <p class="card-meta">Benjamin Thomas • Morning Talk</p>
+                    <span class="card-meta-arrow">&rarr;</span>
+                  </div>
+                </a>
+              </div>
+            </article>
+
+            <article class="podcast-card">
+              <div class="card-image"></div>
+              <div class="gradient-overlay"></div>
+              <div class="card-content">
+                <a href="#" class="card-content-link">
+                  <h2 class="card-title">
+                    Why the First Mile Is Like Monday Mornings
+                  </h2>
+                  <div class="card-content-inner">
+                    <p class="card-meta">Benjamin Thomas • Morning Talk</p>
+                    <span class="card-meta-arrow">&rarr;</span>
+                  </div>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <aside class="blog-sidebar">
+            <h3 class="sidebar-title">From the Blog</h3>
+            <ul class="blog-list">
+              <li>
+                <a href="#"
+                  >The Art of Showing Up: Running and Life's Daily Battles</a
+                >
+                <div class="blog-meta">Thomas Kennedy</div>
+              </li>
+              <li>
+                <a href="#">How I Survived My First Run (And My Weak Wills)</a>
+                <div class="blog-meta">Michael Wilson</div>
+              </li>
+              <li>
+                <a href="#"
+                  >Running Teaches You Patience... or How to Tolerate It</a
+                >
+                <div class="blog-meta">Rachel Wilson</div>
+              </li>
+              <li>
+                <a href="#">Run Now, Complain Later: My New Life Motto</a>
+                <div class="blog-meta">Scott Matthews</div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section> -->
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <a href="./index.html" class="logo">
+            <img src="./images/logo.png" alt="Aurum Gold Logo" />
+          </a>
+          <p>
+            Welcome to Aurum Gold, a digital sanctuary where the essence of gold
+            transcends the ordinary. Immerse yourself in a realm of opulence,
+            where every pixel glistens with the warmth of golden hues. From
+            curated collections that embody luxury to a seamless user
+            experience, we've forged a digital masterpiece that mirrors the
+            richness of the precious metal itself.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h2>QUICK LINKS</h2>
+          <ul>
+            <li><a href="index.html" class="quick-link">Home</a></li>
+            <li>
+              <a href="./pages/about-us.html" class="quick-link">About Us</a>
+            </li>
+            <li>
+              <a href="pages/gold-coin.html" class="quick-link">Gold Coins</a>
+            </li>
+            <li>
+              <a href="pages/gold-bars.html" class="quick-link">Gold Bars</a>
+            </li>
+            <li><a href="pages/gift.html" class="quick-link">Gifts</a></li>
+            <li><a href="#" class="quick-link">Contact Us</a></li>
+            <li><a href="#" class="quick-link">Privacy Policy</a></li>
+            <li><a href="#" class="quick-link">Terms And Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h2>INFO</h2>
+          <ul>
+            <li><a href="#" class="quick-link">Shipping & Returns</a></li>
+            <li><a href="#" class="quick-link">Privacy Policy</a></li>
+            <li><a href="#" class="quick-link">FAQs</a></li>
+            <li><a href="#" class="quick-link">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h2>CONTACT US</h2>
+          <div class="contact-info">
+            <a class="contact-info-link" href="#"
+              ><img src="svgs/map-pin.svg" alt="" />
+              <p>
+                Address: 45B, Near Guru Nanak Mission Chowk, Shastri Nagar,
+                Lajpat Nagar, Jalandhar, Punjab 144001
+              </p>
+            </a>
+          </div>
+          <div class="contact-info">
+            <a class="contact-info-link" href="#"
+              ><img src="svgs/phone.svg" alt="" />
+              <p>09779770059</p>
+            </a>
+          </div>
+          <div class="contact-info">
+            <a class="contact-info-link" href="#"
+              ><img src="svgs/at-sign.svg" alt="" />
+              <p>Aurumgold@gmail.com</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-footer">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"
+            ><img src="svgs/facebook.svg" alt=""
+          /></a>
+          <a href="https://www.instagram.com/"
+            ><img src="svgs/instagram.svg" alt=""
+          /></a>
+          <a href="https://x.com/"
+            ><img src="svgs/x-twitter-brands-solid.svg" alt=""
+          /></a>
+          <a href="https://in.pinterest.com/"
+            ><img src="svgs/Pinterest.svg" alt=""
+          /></a>
+          <a href="https://www.youtube.com/"
+            ><img src="svgs/youtube.svg" alt=""
+          /></a>
+        </div>
+        <div class="copyright-content">
+          <p>
+            © 2024 <span class="aurum-gold">Aurum Gold </span>. &nbsp;All Rights
+            Reserved. Website designed and developed by
+            <a class="premier-webtech" href="https://premierwebtech.com/"
+              >Premier Webtech</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

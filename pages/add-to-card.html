@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/queries.css" />
+    <title>Hearts All Over Bracelet</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        line-height: 1.5;
+        color: #333;
+        background: #fff;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .product-images {
+        width: 50%;
+        padding-right: 20px;
+      }
+
+      .main-image-container {
+        width: 100%;
+        margin-bottom: 10px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .main-image {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .magnified-image {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        z-index: 2;
+        display: none;
+      }
+
+      .thumbnail-container {
+        display: flex;
+        gap: 10px;
+      }
+
+      .thumbnail {
+        width: 60px;
+        height: 60px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+      }
+
+      .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product-info {
+        width: 50%;
+        padding-left: 20px;
+      }
+
+      .product-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .product-price {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .original-price {
+        text-decoration: line-through;
+        color: #999;
+      }
+
+      .discounted-price {
+        color: #000;
+        font-weight: bold;
+      }
+
+      .rating {
+        color: #ffd700;
+        margin-bottom: 20px;
+      }
+
+      .accordion-container {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .accordion-item {
+        border-bottom: 1px solid #eee;
+      }
+
+      .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .accordion-header h3 {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .accordion-button {
+        width: 24px;
+        height: 24px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.3s ease;
+      }
+
+      .accordion-button::before,
+      .accordion-button::after {
+        content: "";
+        position: absolute;
+        background: #fff;
+        transition: transform 0.3s ease;
+      }
+
+      .accordion-button::before {
+        width: 2px;
+        height: 12px;
+        top: 6px;
+        left: 11px;
+      }
+
+      .accordion-button::after {
+        width: 12px;
+        height: 2px;
+        top: 11px;
+        left: 6px;
+      }
+
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        padding: 0 15px;
+        background: #f9f9f9;
+      }
+
+      .accordion-item.active .accordion-button::before {
+        transform: rotate(90deg);
+      }
+
+      .accordion-item.active .accordion-content {
+        max-height: 200px;
+        padding: 15px;
+      }
+
+      .product-features {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .feature {
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .feature img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 5px;
+      }
+
+      .buttons {
+        margin-top: 20px;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background-color: #333;
+        color: #fff;
+      }
+
+      @keyframes btn-primary {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(5px);
+        }
+        50% {
+          transform: translateX(-5px);
+        }
+        75% {
+          transform: translateX(5px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .btn-secondary {
+        background-color: #fff;
+        color: #333;
+        border: 1px solid #333;
+      }
+
+      .delivery-estimate {
+        margin-top: 20px;
+      }
+
+      .delivery-input {
+        width: calc(100% - 80px);
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      .delivery-btn {
+        width: 70px;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .social-share {
+        margin-top: 20px;
+      }
+
+      .social-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+
+      .affordable-luxury {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .price-comparison {
+        display: flex;
+        align-items: center;
+      }
+
+      .price-bar {
+        width: 100px;
+        height: 4px;
+        background-color: #ddd;
+        margin: 0 10px;
+      }
+
+      .price-bar-fill {
+        height: 100%;
+        background-color: #ffd700;
+        width: 30%;
+      }
+
+      @media (max-width: 768px) {
+        .product-images,
+        .product-info {
+          width: 100%;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="top-bar">
+      <a href="https://gold.premiercourses.in/subscriptions"
+        >Wealth Creation Account</a
+      >
+      <a href="#">Track Order</a>
+      <a href="#">Login/Register</a>
+    </div>
+    <header class="header">
+      <a href="./" class="logo">
+        <img src="../images/logo.png" alt="Aurum Gold Logo" />
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about-us.html">About Us</a></li>
+          <li><a href="gold-coin.html">Gold Coins</a></li>
+          <li><a href="gold-bars.html">Gold Bars</a></li>
+          <li><a href="gift.html">Gifts</a></li>
+          <li>
+            <a href="https://gold.premiercourses.in/subscriptions"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+    <div class="container">
+      <div class="product-images">
+        <div class="main-image-container">
+          <img
+            src="../images/PRODUCTS/ER118-2.avif"
+            alt="Hearts All Over Bracelet"
+            class="main-image"
+            id="mainImage"
+          />
+          <div class="magnified-image" id="magnifiedImage"></div>
+        </div>
+        <div class="thumbnail-container">
+          <div class="thumbnail">
+            <img
+              src="../images/PRODUCTS/Artboard9_4.webp"
+              alt="Thumbnail 1"
+              data-full-img="../images/PRODUCTS/Artboard9_4.webp"
+            />
+          </div>
+          <div class="thumbnail">
+            <img
+              src="../images/PRODUCTS/ring.webp"
+              alt="Thumbnail 2"
+              data-full-img="../images/PRODUCTS/ring.webp"
+            />
+          </div>
+          <div class="thumbnail">
+            <img
+              src="../images/PRODUCTS/01_49ddc3de-a15c-42d0-bef3-2637a64c96b5.webp"
+              alt="Thumbnail 3"
+              data-full-img="../images/PRODUCTS/01_49ddc3de-a15c-42d0-bef3-2637a64c96b5.webp"
+            />
+          </div>
+          <div class="thumbnail">
+            <img
+              src="../images/PRODUCTS/ring.webp"
+              alt="Thumbnail 4"
+              data-full-img="../images/PRODUCTS/ring.webp"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1 class="product-title">Hearts All Over Bracelet</h1>
+        <div class="product-price">
+          <span class="original-price">₹3,184.00</span>
+          <span class="discounted-price">₹2,229.00</span>
+          <span>(30% off Taxes)</span>
+        </div>
+        <div class="rating">★★★★★ (136)</div>
+
+        <div class="accordion-container">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>Offers</h3>
+              <button class="accordion-button"></button>
+            </div>
+            <div class="accordion-content">
+              <p>BUY 1 GET 1 offer available</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>Composition</h3>
+              <button class="accordion-button"></button>
+            </div>
+            <div class="accordion-content">
+              <p>Made of high-quality gold-plated material</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>Description</h3>
+              <button class="accordion-button"></button>
+            </div>
+            <div class="accordion-content">
+              <p>Elegant bracelet with heart-shaped charms</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>Lifetime warranty</h3>
+              <button class="accordion-button"></button>
+            </div>
+            <div class="accordion-content">
+              <p>This product comes with a lifetime warranty</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>Supplier Information</h3>
+              <button class="accordion-button"></button>
+            </div>
+            <div class="accordion-content">
+              <p>Supplied by authorized gold retailer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-features">
+          <div class="feature">
+            <img
+              src="https://via.placeholder.com/40x40.png?text=Icon"
+              alt="Daily Use"
+            />
+            <p>Crafted for Daily Use</p>
+          </div>
+          <div class="feature">
+            <img
+              src="https://via.placeholder.com/40x40.png?text=Icon"
+              alt="Safe Jewelry"
+            />
+            <p>Skin Safe Jewellery</p>
+          </div>
+          <div class="feature">
+            <img
+              src="https://via.placeholder.com/40x40.png?text=Icon"
+              alt="Gold Tone Plated"
+            />
+            <p>Gold Tone Plated</p>
+          </div>
+          <div class="feature">
+            <img
+              src="https://via.placeholder.com/40x40.png?text=Icon"
+              alt="Easy Return"
+            />
+            <p>Easy Return Exchange</p>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button class="btn btn-primary">ADD TO CART</button>
+          <button class="btn btn-secondary">BUY IT NOW</button>
+        </div>
+
+        <div class="delivery-estimate">
+          <input
+            type="text"
+            class="delivery-input"
+            placeholder="Enter your pincode"
+          />
+          <button class="delivery-btn">Check</button>
+        </div>
+
+        <!-- <div class="social-share">
+          <img
+            src="https://via.placeholder.com/30x30.png?text=FB"
+            alt="Facebook"
+            class="social-icon"
+          />
+          <img
+            src="https://via.placeholder.com/30x30.png?text=Pin"
+            alt="Pinterest"
+            class="social-icon"
+          />
+          <img
+            src="https://via.placeholder.com/30x30.png?text=TW"
+            alt="Twitter"
+            class="social-icon"
+          />
+          <img
+            src="https://via.placeholder.com/30x30.png?text=WA"
+            alt="WhatsApp"
+            class="social-icon"
+          />
+        </div> -->
+
+        <!-- <div class="affordable-luxury">
+          <div class="price-comparison">
+            <span>₹2,229.00</span>
+            <div class="price-bar"><div class="price-bar-fill"></div></div>
+            <span>₹18,723.60</span>
+          </div>
+          <a href="#">Learn More</a>
+        </div> -->
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <a href="../index.html" class="logo">
+            <img src="../images/logo.png" alt="Aurum Gold Logo" />
+          </a>
+          <p>
+            Welcome to Aurum Gold, a digital sanctuary where the essence of gold
+            transcends the ordinary. Immerse yourself in a realm of opulence,
+            where every pixel glistens with the warmth of golden hues. From
+            curated collections that embody luxury to a seamless user
+            experience, we've forged a digital masterpiece that mirrors the
+            richness of the precious metal itself.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h2>QUICK LINKS</h2>
+          <ul>
+            <li><a href="../index.html" class="quick-link">Home</a></li>
+            <li>
+              <a href="../pages/about-us.html" class="quick-link">About Us</a>
+            </li>
+            <li><a href="gold-coin.html" class="quick-link">Gold Coins</a></li>
+            <li><a href="gold-bars.html" class="quick-link">Gold Bars</a></li>
+            <li><a href="gift.html" class="quick-link">Gifts</a></li>
+            <li>
+              <a
+                href="https://gold.premiercourses.in/subscriptions"
+                class="quick-link"
+                >Contact Us</a
+              >
+            </li>
+            <li><a href="#" class="quick-link">Privacy Policy</a></li>
+            <li><a href="#" class="quick-link">Terms And Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h2>INFO</h2>
+          <ul>
+            <li><a href="#" class="quick-link">Shipping & Returns</a></li>
+            <li><a href="#" class="quick-link">Privacy Policy</a></li>
+            <li><a href="#" class="quick-link">FAQs</a></li>
+            <li><a href="#" class="quick-link">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h2>CONTACT US</h2>
+          <div class="contact-info">
+            <a class="contact-info-link" href="#"
+              ><img src="../svgs/map-pin.svg" alt="" />
+              <p>
+                Address: 45B, Near Guru Nanak Mission Chowk, Shastri Nagar,
+                Lajpat Nagar, Jalandhar, Punjab 144001
+              </p>
+            </a>
+          </div>
+          <div class="contact-info">
+            <a class="contact-info-link" href="#"
+              ><img src="../svgs/phone.svg" alt="" />
+              <p>09779770059</p>
+            </a>
+          </div>
+          <div class="contact-info">
+            <a class="contact-info-link" href="#"
+              ><img src="../svgs/at-sign.svg" alt="" />
+              <p>Aurumgold@gmail.com</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-footer">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"
+            ><img src="../svgs/facebook.svg" alt=""
+          /></a>
+          <a href="https://www.instagram.com/"
+            ><img src="../svgs/instagram.svg" alt=""
+          /></a>
+          <a href="https://x.com/"
+            ><img src="../svgs/x-twitter-brands-solid.svg" alt=""
+          /></a>
+          <a href="https://in.pinterest.com/"
+            ><img src="../svgs/Pinterest.svg" alt=""
+          /></a>
+          <a href="https://www.youtube.com/"
+            ><img src="../svgs/youtube.svg" alt=""
+          /></a>
+        </div>
+        <div class="copyright-content">
+          <p>
+            © 2024 <span class="aurum-gold">Aurum Gold </span>. &nbsp;All Rights
+            Reserved. Website designed and developed by
+            <a class="premier-webtech" href="https://premierwebtech.com/"
+              >Premier Webtech</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Accordion functionality
+      document.querySelectorAll(".accordion-header").forEach((button) => {
+        button.addEventListener("click", () => {
+          const accordionItem = button.parentElement;
+          const isActive = accordionItem.classList.contains("active");
+
+          // Close all accordion items
+          document.querySelectorAll(".accordion-item").forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          // If the clicked item wasn't active, open it
+          if (!isActive) {
+            accordionItem.classList.add("active");
+          }
+        });
+      });
+
+      // Image change on thumbnail hover and click
+      const mainImage = document.getElementById("mainImage");
+      const thumbnails = document.querySelectorAll(".thumbnail img");
+
+      thumbnails.forEach((thumb) => {
+        thumb.addEventListener("mouseover", function () {
+          mainImage.src = this.getAttribute("data-full-img");
+        });
+
+        thumb.addEventListener("click", function () {
+          mainImage.src = this.getAttribute("data-full-img");
+        });
+      });
+
+      // Image magnification
+      const magnifiedImage = document.getElementById("magnifiedImage");
+      const mainImageContainer = document.querySelector(
+        ".main-image-container"
+      );
+
+      mainImageContainer.addEventListener("mousemove", function (e) {
+        const boundingRect = this.getBoundingClientRect();
+        const x = e.clientX - boundingRect.left;
+        const y = e.clientY - boundingRect.top;
+
+        const xPercent = (x / this.offsetWidth) * 100;
+        const yPercent = (y / this.offsetHeight) * 100;
+
+        magnifiedImage.style.backgroundImage = `url('${mainImage.src}')`;
+        magnifiedImage.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+        magnifiedImage.style.backgroundSize = "250%";
+        magnifiedImage.style.display = "block";
+      });
+
+      mainImageContainer.addEventListener("mouseleave", function () {
+        magnifiedImage.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

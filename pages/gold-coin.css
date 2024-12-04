@@ -1,0 +1,14 @@
+.section-gold-coins {
+  background: url("../images/slides/BANNER\ GOLD\ COINS.jpg");
+  height: 50rem;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading-gold-coins {
+  font-size: 14.2rem;
+  color: #fab005;
+  margin-left: 18rem;
+}

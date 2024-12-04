@@ -1,0 +1,473 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* //////////////// */
+/* Laptop L -> 1200px */
+/* //////////////// */
+
+@media (max-width: 75em) {
+  .categories-container {
+    height: 58rem;
+  }
+
+  .category img {
+    width: 36.6rem;
+    height: auto;
+  }
+
+  .section-wealth-creation {
+    padding: 2.8rem;
+  }
+
+  .wealth-container {
+    gap: 4.8rem;
+  }
+}
+
+/* //////////////// */
+/* Desktop -> 1024px */
+/* //////////////// */
+@media (max-width: 64em) {
+  .section-embrace-the-purity {
+    padding: 0 5.8rem;
+  }
+
+  .embrace-image-container {
+    width: 50%;
+  }
+
+  .heading-embrace {
+    font-size: 5.2rem;
+  }
+
+  .section-wealth-creation {
+    padding: 2.8rem;
+  }
+
+  .wealth-container {
+    gap: 4.8rem;
+  }
+
+  .wealth-creation-img {
+    height: auto;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .podcast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* //////////////// */
+/* Laptop -> 960px */
+/* //////////////// */
+
+@media (max-width: 60rem) {
+  .categories-container {
+    height: 46rem;
+  }
+
+  .category img {
+    width: 28.6rem;
+  }
+
+  .section-embrace-the-purity {
+    padding: 0 1.8rem;
+  }
+
+  .embrace-image-container {
+    width: 50%;
+  }
+
+  .heading-embrace {
+    font-size: 4.8rem;
+    font-weight: 600;
+  }
+
+  .customer-love {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .content-right {
+    max-width: 100%;
+  }
+
+  /* //////////////// */
+  /* ABOUT US PAGE*/
+  /* //////////////// */
+
+  .about-container {
+    padding: 0;
+  }
+
+  .about-heading-container {
+    grid-column: 1 / -1;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .heading-tertiary {
+    font-size: 3.2rem;
+  }
+
+  .about-image-container {
+    display: none;
+  }
+
+  /* //////////////// */
+  /* Gold Coin PAGE*/
+  /* //////////////// */
+
+  .section-gold-coins {
+    padding-right: 1.8rem;
+    justify-content: flex-end;
+  }
+
+  .heading-gold-coins {
+    font-size: 9.8rem;
+  }
+}
+
+/* //////////////// */
+/* Tablet -> 768px */
+/* //////////////// */
+
+@media (max-width: 48em) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    flex-direction: column;
+    padding: 80px 20px;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-menu li {
+    margin: 15px 0;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .overlay.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .top-bar a:link,
+  .top-bar a:visited {
+    /* display: none; */
+    font-size: 1.2rem;
+  }
+
+  .slider-container {
+    height: 25rem;
+  }
+
+  .slide-background {
+    height: 24rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+    margin-right: -3.2rem;
+  }
+
+  .categories-container {
+    height: 56rem;
+  }
+
+  .category img {
+    width: 34.6rem;
+  }
+
+  .heading-embrace {
+    font-size: 3.6rem;
+    font-weight: 600;
+  }
+
+  .more-details-link:link,
+  .more-details-link:visited {
+    font-size: 1.8rem;
+  }
+
+  /* //////////////// */
+  /* ABOUT US PAGE*/
+  /* //////////////// */
+
+  .about-container {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .about-wave-container {
+    grid-column: 1 / -1;
+  }
+
+  .about-content-container {
+    grid-column: 1 / -1;
+    grid-row: 3 / -1;
+  }
+
+  /* //////////////// */
+  /* Gold Coin PAGE*/
+  /* //////////////// */
+
+  /* .heading-gold-coins {
+    font-size: 9.8rem;
+  } */
+}
+
+/* //////////////// */
+/*  608px */
+/* //////////////// */
+
+@media (max-width: 38em) {
+  .heading-primary {
+    font-size: 3.6rem;
+  }
+
+  .section-embrace-the-purity {
+    padding: 4.8rem 0;
+  }
+
+  .embrace-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .embrace-image-container {
+    width: 70%;
+  }
+
+  .wealth-image-container {
+    margin-right: -8rem;
+  }
+
+  .wealth-creation-heading-container {
+    align-items: center;
+  }
+
+  .heading-embrace {
+    text-align: center;
+  }
+
+  /* //////////////// */
+  /* ABOUT US PAGE*/
+  /* //////////////// */
+
+  .about-content-container {
+    margin: 2rem;
+  }
+
+  .about-content-container p {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+/* //////////////// */
+/* Mobile -> 496px */
+/* //////////////// */
+
+@media (max-width: 31em) {
+  .heading-primary {
+    font-size: 3rem;
+    margin-right: -1.2rem;
+  }
+
+  .container {
+    padding: 3.8rem 1.1rem;
+  }
+
+  .section-little-extra .category {
+    padding-top: 0;
+  }
+
+  .categories-container {
+    height: 44rem;
+  }
+
+  .category img {
+    width: 28.8rem;
+  }
+}
+
+@media (max-width: 26.5em) {
+  .category img {
+    width: 36.8rem;
+  }
+}
+
+@media (max-width: 23em) {
+  .category img {
+    width: 34.2rem;
+  }
+}
+
+@media (max-width: 20em) {
+  .category img {
+    width: 29.2rem;
+  }
+}
+
+/**************************/
+/* BLOGS */
+/**************************/
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 640px) {
+  .blog-grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .podcast-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+}
+
+/**************************/
+/* FOOTER */
+/**************************/
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .social-payment {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/**************************/
+/* PRODUCT COMPARISON */
+/**************************/
+
+@media (max-width: 768px) {
+  .comparison-table {
+    font-size: 1.4rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 1rem;
+  }
+
+  /* .product-image {
+    width: 10rem;
+    height: 10rem;
+  } */
+
+  .product-name {
+    font-size: 1.6rem;
+  }
+
+  .product-price {
+    font-size: 1.8rem;
+  }
+
+  .buy-button {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-table {
+    font-size: 1.2rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.8rem;
+  }
+
+  .product-name {
+    font-size: 1.4rem;
+  }
+
+  .product-price {
+    font-size: 1.6rem;
+  }
+
+  .buy-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.2rem;
+  }
+}
+
+/**************************/
+/* FOOTER */
+/**************************/
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-section {
+    width: 100%;
+  }
+}

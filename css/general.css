@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #333;
+  background-color: #f3f3f3;
+
+  overflow-x: hidden;
+}
+
+.list {
+  list-style: none;
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: #555;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+.heading {
+  font-family: "Playfiar Display", serif;
+  text-align: center;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 500;
+  margin: 0 -5.2rem 2.2rem 0;
+}
+
+.heading-secondary {
+  font-size: 3.2rem;
+  padding-bottom: 1.8rem;
+}
